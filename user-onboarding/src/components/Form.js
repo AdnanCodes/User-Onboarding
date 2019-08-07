@@ -47,10 +47,10 @@ const FormikUserForm = withFormik({
   validationSchema: Yup.object().shape({
     email: Yup.string()
       .email()
-      .required(),
+      .required("Email is required to sign up"),
     password: Yup.string()
-      .min(6)
-      .required()
+      .min(6, "Password needs to be at least 6 characters")
+      .required("Password is required")
   }),
   handleSubmit(values) {
     console.log(values);
