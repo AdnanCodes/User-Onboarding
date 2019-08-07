@@ -5,7 +5,6 @@ import axios from "axios";
 
 const UserForm = ({ errors, touched, status }) => {
   const [user, setUser] = useState([]);
-  console.log(user);
   useEffect(() => {
     if (status) {
       setUser([...user, status]);
